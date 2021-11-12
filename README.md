@@ -3,9 +3,7 @@
 
 The search for a representative route problem is reduced to two strategies with different solutions:
 
-the first strategy is based on finding the most popular route and uses algorithms to find the maximum flow, but the problem consists in correctly estimating the weight of each edge of the graph and it requires an evaluation of at least O (VE log(V2/E)) with the use of dynamic programming and one of the disadvantages is the determinism of the problem.
-
-the second strategy uses the KNN algorithm search for nearest neighbors and partition into clusters this algorithm is not determined and gives a result, the only difficulty is the choice of the number of clusters here we proceed from an empirical estimate
+the KNN algorithm search for nearest neighbors and partition into clusters this algorithm is not determined and gives a result, the only difficulty is the choice of the number of clusters here we proceed from an empirical estimate
 
 Based on the second chosen strategy, we can observe that there is no more than one route in different directions, but if the routes are correctly divided into clusters, they should be visually similar, and the distance between points should not exceed the error. For outliers we will use the interquartile range.
 
